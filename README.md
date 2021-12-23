@@ -13,6 +13,8 @@ Plot the distribution of ages less than 100 by BMI groups. (i.e. use filter func
 By plotting a graph, show the relationship between age and BMI values (use point and line at the same time). Re-plot the same graph after filtering the data as both age and BMI less than 100.
 
 
+
+
 PROJECT 2
 
 set.seed allows the user to set the initial seed for variate generators. Use your student id as a seed number. You should write set.seed(your student id) at the beginning of your code. For example if your student id is 2020555001 then write set.seed(2020555001). This will provide that everyone has different generated numbers from each other.
