@@ -1,0 +1,77 @@
+---
+title: "midterm3"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(dplyr)
+set.seed(2017555049)
+
+# Question 1
+n <- 100
+x <- seq(1, n)      #a vector 1-100
+
+primes = c()
+
+composites = c()
+
+prime_factors <- function(x, i=2, factors = NULL){          #composites to prime factors
+  if(x<i) factors
+  else if(! x %% i) prime_factors(x/i, i, c(factors, i))
+  else  prime_factors(x, i+1, factors)
+}
+
+comPrime <- function(n){
+  for (i in seq(2, n)) {                                    #1 is not composite or prime
+    if (any(x == i)) {
+      primes = c(primes, i)
+      x = c(x[(x %% i) != 0], i)
+    }
+    else{
+      composites = c(composites, i)
+      print(i)
+      print(prime_factors(i))
+      {
+        
+      }
+    }
+  }
+  
+  print("prime numbers")
+  print(primes)                     #primes
+  
+  print("composite numbers")
+  print(composites)                 #just composites
+  
+}
+
+x = comPrime(n)
+
+# Question 2
+
+data<- stringr::sentences
+data2<-sample(data, size = 5)
+rsent<-data2%>%strsplit(" ")
+rsent<-unlist(rsent)
+word_data<-unique(rsent)
+
+sort_word <- function(input) {
+  
+  input %>% 
+    str_extract_all(stringr::boundary("word")) %>% 
+    unlist() %>% 
+    split(f=str_length(.)) %>% 
+    map(str_sort) %>% 
+    unlist(use.names = F) %>% 
+    str_c(collapse = " ") %>% 
+    str_to_lower()
+  
+}
+
+sort_word(word_data)
+```
