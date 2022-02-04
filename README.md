@@ -28,6 +28,15 @@ Part 1
 Save the attached file (covid-data-2020) as an Excel file (.csv, .xls or .xlsx format), then import this data to R. (You can supply an inline CSV file instead of importing, if you like).
 
 
+Part 2
+
+Answer the following questions by using the sentences, which are provided in stringr::sentences.
+
+Take a random sample of 100 sentences from this data, then split these sentences into words and take each word as a member of a vector. After removing duplicated words (you can use unique() function to remove duplicated words), save this sample as a new data. With this new data, provide the answers for
+Find words which are starting with “a” and ending with “e”.
+Calculate the number of words which have more than 3 vowels.
+List the five longest word in your data
+Try to find word(s) which contain any of these words: age, any, day, exp, her, pro, the.
 
 
 
@@ -62,12 +71,3 @@ Identify the month in which the mean daily cases is the highest for each country
 Select 3 country and plot the distribution of daily cases by month. Use location as clusters (i.e., color=location) to show the difference between countries.
  
 
-Part 2
-
-Answer the following questions by using the sentences, which are provided in stringr::sentences.
-
-Take a random sample of 100 sentences from this data, then split these sentences into words and take each word as a member of a vector. After removing duplicated words (you can use unique() function to remove duplicated words), save this sample as a new data. With this new data, provide the answers for
-Find words which are starting with “a” and ending with “e”.
-Calculate the number of words which have more than 3 vowels.
-List the five longest word in your data
-Try to find word(s) which contain any of these words: age, any, day, exp, her, pro, the.
